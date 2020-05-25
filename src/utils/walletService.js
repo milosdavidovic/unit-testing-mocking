@@ -7,7 +7,7 @@
  *
  */
 function createTransaction(userId, amount) {
-  console.log(`Users ${userId} account changed by ${amount}.`);
+  // console.log(`Users ${userId} account changed by ${amount}.`);
 }
 
 module.exports = { createTransaction };
