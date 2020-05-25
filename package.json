@@ -1,0 +1,10 @@
+{
+  "name": "unit-testing-mocking",
+  "version": "1.0.0",
+  "author": "Milos Davidovic",
+  "main": "src/mocking-example.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
