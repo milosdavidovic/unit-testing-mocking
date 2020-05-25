@@ -9,3 +9,14 @@ test("when user wins, playRound will return true", () => {
   expect(result).toBe(true);
   coinFlipper.flipACoin = originalFlipCoin;
 });
+
+test("when user losses, playRound will return false", () => {
+  // arrange
+  jest.spyOn(coinFlipper, "flipACoin");
+  coinFlipper.flipACoin.mockImplementation(() => "tails");
+  // act
+  const result = playRound("1", "heads", 100);
+  // assert
+  expect(result).toBe(false);
+  jest.clearAllMocks();
+});
