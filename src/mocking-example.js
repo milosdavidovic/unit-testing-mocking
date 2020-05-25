@@ -4,7 +4,7 @@ const service = require("./utils/walletService");
 const WIN_MULTIPLIER = 2;
 
 function playRound(userId, predictedResult, betAmount) {
-  if (!betAmount) {
+  if (betAmount <= 0) {
     throw new Error("betAmount is invalid");
   }
   const result = coinFlipper.flipACoin();

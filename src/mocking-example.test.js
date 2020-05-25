@@ -47,3 +47,9 @@ test("when user losses, createTransaction is called with negative bet amount", (
   expect(createTransactionMock).toBeCalledTimes(1);
   expect(createTransactionMock).toBeCalledWith("1", -100);
 });
+
+test("when bet amount equal or less then zero, error is thrown", () => {
+  expect(() => {
+    playRound("1", "tails", -100);
+  }).toThrow();
+});
