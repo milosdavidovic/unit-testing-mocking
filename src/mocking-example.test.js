@@ -36,3 +36,14 @@ test("when user wins, createTransaction is called with double bet amount", () =>
   expect(service.createTransaction).toBeCalledTimes(1);
   expect(service.createTransaction).toBeCalledWith("1", 200);
 });
+
+test("when user losses, createTransaction is called with negative bet amount", () => {
+  // arrange
+  jest.spyOn(coinFlipper, "flipACoin").mockImplementation(() => "heads");
+  const createTransactionMock = jest.spyOn(service, "createTransaction");
+  // act
+  playRound("1", "tails", 100);
+  // assert
+  expect(createTransactionMock).toBeCalledTimes(1);
+  expect(createTransactionMock).toBeCalledWith("1", -100);
+});
