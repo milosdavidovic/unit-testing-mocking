@@ -5,6 +5,6 @@
   "main": "src/mocking-example.js",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.0.1"
   }
 }
