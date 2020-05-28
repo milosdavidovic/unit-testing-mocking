@@ -5,6 +5,10 @@
   "main": "src/mocking-example.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.10.1",
+    "@types/jest": "^25.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "jest": "^26.0.1"
   }
 }
