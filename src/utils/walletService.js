@@ -7,7 +7,7 @@
  *
  */
 function createTransaction(userId, amount) {
-  // console.log(`Users ${userId} account changed by ${amount}.`);
+  // here would be some logic to call the wallet api
 }
 
 module.exports = { createTransaction };
